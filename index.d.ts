@@ -1,31 +1,31 @@
-/// <reference types="react" />
 import * as React from 'react'
 import {
-  ViewProperties,
-  TextProperties
+  StyleProp,
+  ViewStyle,
+  ViewProperties
 } from 'react-native'
 interface ICarouselProps extends ViewProperties {
   autoplay?: boolean
   delay?: number
   currentPage?: number
-  pageStyle?: ViewProperties
-  contentContainerStyle?: ViewProperties
+  pageStyle?: StyleProp<ViewStyle>
+  contentContainerStyle?: StyleProp<ViewStyle>
   pageInfo?: boolean
   pageInfoBackgroundColor?: string
-  pageInfoTextStyle?: TextProperties
-  pageInfoBottomContainerStyle?: ViewProperties
+  pageInfoTextStyle?: StyleProp<ViewStyle>
+  pageInfoBottomContainerStyle?: StyleProp<ViewStyle>
   pageInfoTextSeparator?: string
   bullets?: boolean
-  bulletsStyle?: TextProperties
-  bulletsContainerStyle?: TextProperties
-  bulletStyle?: TextProperties
+  bulletsStyle?: StyleProp<ViewStyle>
+  bulletsContainerStyle?: StyleProp<ViewStyle>
+  bulletStyle?: StyleProp<ViewStyle>
   arrows?: boolean
-  arrowsContainerStyle?: TextProperties
-  arrowstyle?: TextProperties
+  arrowsContainerStyle?: StyleProp<ViewStyle>
+  arrowstyle?: StyleProp<ViewStyle>
   leftArrowText?: {}
   rightArrowText?: {}
-  chosenBulletStyle?: TextProperties
+  chosenBulletStyle?: StyleProp<ViewStyle>
   onAnimateNextPage?: Function
   swipe?: boolean
 }
-export class Carousel extends Component<ICarouselProps> {}
+export class Carousel extends React.Component<ICarouselProps> {}
