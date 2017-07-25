@@ -18,7 +18,7 @@ const PAGE_CHANGE_DELAY = 4000;
  * Animates pages in cycle
  * (loop possible if children count > 1)
 */
-export default class Carousel extends Component {
+export class Carousel extends Component {
   static propTypes = {
     children: PropTypes.node.isRequired,
     autoplay: PropTypes.bool,
@@ -297,7 +297,7 @@ export default class Carousel extends Component {
         </TouchableWithoutFeedback>);
     }
     return (
-      <View style={styles.bullets} pointerEvents="box-none">
+      <View style={[styles.bullets,this.props.bulletsStyle]} pointerEvents="box-none">
         <View style={[styles.bulletsContainer, this.props.bulletsContainerStyle]} pointerEvents="box-none">
           {bullets}
         </View>
